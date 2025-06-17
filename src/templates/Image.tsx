@@ -1,5 +1,5 @@
-import Image from "next/image";
-import type { ReactEventHandler } from "react";
+import Image from 'next/image';
+import type { ReactEventHandler } from 'react';
 interface IProps {
   src: string;
   alt: string;
@@ -11,7 +11,7 @@ interface IProps {
 export const Img: React.FC<IProps> = ({
   src,
   alt,
-  className = "",
+  className = '',
   height,
   width,
   onError,
@@ -25,7 +25,7 @@ export const Img: React.FC<IProps> = ({
       className={className}
       height={height}
       width={width}
-      style={{ height: height || "100%", width: width || "100%" }} //If user pass height = 0 and width = 0 then template will consider it as 100% height and width
+      style={{ height: height || '100%', width: width || '100%' }} //If user pass height = 0 and width = 0 then template will consider it as 100% height and width
     />
   );
 };

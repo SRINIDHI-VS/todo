@@ -1,5 +1,5 @@
-import type { ChangeEventHandler } from "react";
-import { useState } from "react";
+import type { ChangeEventHandler } from 'react';
+import { useState } from 'react';
 
 import {
   Button,
@@ -10,14 +10,14 @@ import {
   Modal,
   Radio,
   Select,
-} from "@/templates";
-import { Typography } from "@/templates/Typography";
+} from '@/templates';
+import { Typography } from '@/templates/Typography';
 
 const Playground = () => {
   const [checked, setChecked] = useState(false);
   const [radioValue, setRadioValue] = useState<any>(null);
   const [dropdownValue, setDropdownValue] = useState<null | number>(null);
-  const [inputText, setInputText] = useState("");
+  const [inputText, setInputText] = useState('');
 
   const [modalOpen, setModalOpen] = useState(false);
   const handleCheckBoxClick: ChangeEventHandler = () => {
@@ -59,7 +59,7 @@ const Playground = () => {
       <hr />
       <hr />
       <h2>Checkboxes</h2>
-      <div style={{ backgroundColor: "orangered" }}>
+      <div style={{ backgroundColor: 'orangered' }}>
         <Checkbox
           checked={checked}
           onChange={handleCheckBoxClick}
@@ -98,7 +98,7 @@ const Playground = () => {
 
       <h2>Radio (checked not controlled)</h2>
 
-      <div style={{ backgroundColor: "lime" }}>
+      <div style={{ backgroundColor: 'lime' }}>
         <Radio
           value="small value"
           name="demo-1"
@@ -143,8 +143,8 @@ const Playground = () => {
           label="disabled"
           size="lg"
         />
-        <p style={{ color: "black" }}>
-          selected option: {radioValue ?? "null"}
+        <p style={{ color: 'black' }}>
+          selected option: {radioValue ?? 'null'}
         </p>
         <input type="datetime-local" />
       </div>
@@ -196,12 +196,12 @@ const Playground = () => {
           onChange={(e, v) => console.log(v)}
           defaultValue={20}
           options={[
-            { value: 0, label: "red" },
-            { value: 1, label: "yellow" },
-            { value: 2, label: "pink" },
-            { value: 3, label: "blue" },
-            { value: 4, label: "green" },
-            { value: 5, label: "yellow" },
+            { value: 0, label: 'red' },
+            { value: 1, label: 'yellow' },
+            { value: 2, label: 'pink' },
+            { value: 3, label: 'blue' },
+            { value: 4, label: 'green' },
+            { value: 5, label: 'yellow' },
           ]}
         />
         <h3>Controlled Select</h3>
@@ -210,12 +210,12 @@ const Playground = () => {
           defaultValue={20}
           value={dropdownValue}
           options={[
-            { value: 0, label: "red" },
-            { value: 1, label: "yellow" },
-            { value: 2, label: "pink" },
-            { value: 3, label: "blue" },
-            { value: 4, label: "green" },
-            { value: 5, label: "yellow" },
+            { value: 0, label: 'red' },
+            { value: 1, label: 'yellow' },
+            { value: 2, label: 'pink' },
+            { value: 3, label: 'blue' },
+            { value: 4, label: 'green' },
+            { value: 5, label: 'yellow' },
           ]}
         />
         value: {dropdownValue}
@@ -241,13 +241,13 @@ const Playground = () => {
       <h2>Icon Buttons</h2>
       <div className="flex items-center gap-2 text-yellow-300">
         <IconButton
-          onClick={() => console.log("icon button click")}
+          onClick={() => console.log('icon button click')}
           alt="first"
           src="/assets/icons.svg#close-24"
           size="lg"
         />
         <IconButton
-          onClick={() => console.log("icon button click")}
+          onClick={() => console.log('icon button click')}
           alt="first"
           src="/assets/icons.svg#close-20"
           size="sm"
@@ -257,14 +257,14 @@ const Playground = () => {
       <h2>Icon Buttons disabled</h2>
       <div className="flex items-center gap-2 text-yellow-300">
         <IconButton
-          onClick={() => console.log("icon button click")}
+          onClick={() => console.log('icon button click')}
           disabled
           alt="first"
           src="/assets/icons.svg#close-24"
           size="lg"
         />
         <IconButton
-          onClick={() => console.log("icon button click")}
+          onClick={() => console.log('icon button click')}
           alt="first"
           src="/assets/icons.svg#close-20"
           size="sm"
@@ -301,7 +301,7 @@ const Playground = () => {
           value={inputText}
           type="text"
           iconButtonSrc="/assets/icons.svg#close-24"
-          onIconButtonClick={() => setInputText("")}
+          onIconButtonClick={() => setInputText('')}
         />
 
         <Input

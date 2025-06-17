@@ -1,9 +1,9 @@
-import type { OptionOwnerState, OptionProps } from "@mui/base/Option";
-import { Option as BaseOption } from "@mui/base/Option";
-import type { SelectProps } from "@mui/base/Select";
-import { Select as MuiSelect } from "@mui/base/Select";
-import clsx from "clsx";
-import * as React from "react";
+import type { OptionOwnerState, OptionProps } from '@mui/base/Option';
+import { Option as BaseOption } from '@mui/base/Option';
+import type { SelectProps } from '@mui/base/Select';
+import { Select as MuiSelect } from '@mui/base/Select';
+import clsx from 'clsx';
+import * as React from 'react';
 
 type OptionObject = { value: number | string; label: string };
 
@@ -28,19 +28,19 @@ const getOptionColorClasses = ({
   highlighted,
   disabled,
 }: Partial<OptionOwnerState<number>>) => {
-  let classes = "";
+  let classes = '';
   if (disabled) {
-    classes += " text-slate-400 dark:text-slate-700";
+    classes += ' text-slate-400 dark:text-slate-700';
   } else {
     if (selected) {
       classes +=
-        " bg-purple-100 dark:bg-purple-950 text-purple-950 dark:text-purple-50";
+        ' bg-purple-100 dark:bg-purple-950 text-purple-950 dark:text-purple-50';
     } else if (highlighted) {
       classes +=
-        " bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-slate-300";
+        ' bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-slate-300';
     }
     classes +=
-      " hover:dark:bg-slate-800 hover:bg-slate-100 hover:dark:text-slate-300 hover:text-slate-900";
+      ' hover:dark:bg-slate-800 hover:bg-slate-100 hover:dark:text-slate-300 hover:text-slate-900';
   }
   return classes;
 };
@@ -84,7 +84,7 @@ const Option = React.forwardRef<HTMLLIElement, OptionProps<number | string>>(
 // }
 
 const resolveSlotProps = (fn: any, args: any) =>
-  typeof fn === "function" ? fn(args) : fn;
+  typeof fn === 'function' ? fn(args) : fn;
 
 export const CustomSelect = React.forwardRef(function CustomSelect(
   {
@@ -114,7 +114,7 @@ export const CustomSelect = React.forwardRef(function CustomSelect(
             ...resolvedSlotProps,
             className: clsx(
               `box-border w-80 rounded-lg border border-solid border-slate-200 bg-white px-3 py-2 text-left text-sm text-slate-900 shadow shadow-slate-200 outline-0 transition-all hover:bg-slate-50 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-300 dark:shadow-slate-900 dark:hover:bg-slate-700 ${
-                ownerState.focusVisible ? "border-purple-400" : ""
+                ownerState.focusVisible ? 'border-purple-400' : ''
               } ${
                 ownerState.open ? 'after:content-["▴"]' : 'after:content-["▾"]'
               } after:float-right`,
@@ -143,7 +143,7 @@ export const CustomSelect = React.forwardRef(function CustomSelect(
           return {
             ...resolvedSlotProps,
             className: clsx(`absolute z-[99999]`, resolvedSlotProps?.className),
-            container: () => document.getElementById("__next"),
+            container: () => document.getElementById('__next'),
           };
         },
       }}
