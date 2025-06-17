@@ -1,8 +1,8 @@
-import { Box, ButtonBase } from '@mui/material';
-import clsx from 'clsx';
-import React from 'react';
+import { Box, ButtonBase } from "@mui/material";
+import clsx from "clsx";
+import React from "react";
 
-type Size = 'sm' | 'lg';
+type Size = "sm" | "lg";
 
 type IconProps = {
   src: string;
@@ -16,15 +16,15 @@ const sizeStringToNumber: { [key in Size]: number } = {
   lg: 24,
 };
 
-export const Icon = ({ src, alt, className, size = 'lg' }: IconProps) => {
+export const Icon = ({ src, alt, className, size = "lg" }: IconProps) => {
   return (
     <Box
       display="inline-flex"
       sx={{
         width: sizeStringToNumber[size],
         height: sizeStringToNumber[size],
-        '& img': {
-          width: '100%',
+        "& img": {
+          width: "100%",
         },
       }}
     >
@@ -40,7 +40,7 @@ export const IconButton = ({
   alt,
   className,
   onClick,
-  size = 'lg',
+  size = "lg",
   disabled,
   disabledClassName,
   type,
@@ -48,7 +48,7 @@ export const IconButton = ({
   onClick: React.MouseEventHandler<HTMLButtonElement>;
   disabled?: boolean;
   disabledClassName?: string;
-  type?: 'button' | 'reset' | 'submit';
+  type?: "button" | "reset" | "submit";
 }) => {
   return (
     <ButtonBase
@@ -59,8 +59,8 @@ export const IconButton = ({
       sx={{
         width: sizeStringToNumber[size],
         height: sizeStringToNumber[size],
-        '&:disabled': {
-          cursor: 'crosshair',
+        "&:disabled": {
+          cursor: "crosshair",
         },
       }}
     >

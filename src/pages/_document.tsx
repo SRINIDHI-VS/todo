@@ -1,12 +1,12 @@
-import createEmotionServer from '@emotion/server/create-instance';
-import type { AppType } from 'next/app';
-import type { DocumentContext, DocumentProps } from 'next/document';
-import Document, { Head, Html, Main, NextScript } from 'next/document';
+import createEmotionServer from "@emotion/server/create-instance";
+import type { AppType } from "next/app";
+import type { DocumentContext, DocumentProps } from "next/document";
+import Document, { Head, Html, Main, NextScript } from "next/document";
 
-import createEmotionCache from '@/config/createEmotionCache';
+import createEmotionCache from "@/config/createEmotionCache";
 
-import { AppConfig } from '../utils/AppConfig';
-import type { MyAppProps } from './_app';
+import { AppConfig } from "../utils/AppConfig";
+import type { MyAppProps } from "./_app";
 
 interface MyDocumentProps extends DocumentProps {
   emotionStyleTags: JSX.Element[];
@@ -80,7 +80,7 @@ MyDocument.getInitialProps = async (ctx: DocumentContext) => {
   const emotionStyles = extractCriticalToChunks(initialProps.html);
   const emotionStyleTags = emotionStyles.styles.map((style) => (
     <style
-      data-emotion={`${style.key} ${style.ids.join(' ')}`}
+      data-emotion={`${style.key} ${style.ids.join(" ")}`}
       key={style.key}
       // eslint-disable-next-line react/no-danger
       dangerouslySetInnerHTML={{ __html: style.css }}

@@ -1,15 +1,15 @@
-import '../styles/global.css';
+import "../styles/global.css";
 
-import type { EmotionCache } from '@emotion/react';
-import { CacheProvider, ThemeProvider } from '@emotion/react';
-import { StyledEngineProvider } from '@mui/material';
-import type { AppProps } from 'next/app';
-import Head from 'next/head';
-import Script from 'next/script';
+import type { EmotionCache } from "@emotion/react";
+import { CacheProvider, ThemeProvider } from "@emotion/react";
+import { StyledEngineProvider } from "@mui/material";
+import type { AppProps } from "next/app";
+import Head from "next/head";
+import Script from "next/script";
 
-import createEmotionCache from '@/config/createEmotionCache';
-import theme from '@/config/theme';
-import { ToastifyProvider } from '@/templates';
+import createEmotionCache from "@/config/createEmotionCache";
+import theme from "@/config/theme";
+import { ToastifyProvider } from "@/templates";
 
 const clientSideEmotionCache = createEmotionCache();
 

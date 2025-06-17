@@ -1,5 +1,5 @@
-import type { ChangeEvent } from 'react';
-type Size = 'sm' | 'lg' | 'md';
+import type { ChangeEvent } from "react";
+type Size = "sm" | "lg" | "md";
 
 type Props = {
   checked?: boolean;
@@ -14,15 +14,15 @@ type Props = {
 };
 
 const sizeBox: Record<Size, string> = {
-  sm: 'w-3 h-3',
-  md: 'w-4 h-4',
-  lg: 'w-6 h-6',
+  sm: "w-3 h-3",
+  md: "w-4 h-4",
+  lg: "w-6 h-6",
 };
 
 const sizeLabel: Record<Size, string> = {
-  sm: 'text-sm',
-  md: 'text-base',
-  lg: 'text-lg',
+  sm: "text-sm",
+  md: "text-base",
+  lg: "text-lg",
 };
 
 export const Checkbox = ({
@@ -30,15 +30,15 @@ export const Checkbox = ({
   checked,
   onChange,
   disabled,
-  size = 'md',
-  className = '',
+  size = "md",
+  className = "",
   name,
   defaultChecked,
 }: Props) => {
   return (
     <label
       className={`inline-flex items-center ${
-        !disabled && 'cursor-pointer'
+        !disabled && "cursor-pointer"
       } ${className}`}
     >
       <input

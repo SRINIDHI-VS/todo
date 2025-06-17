@@ -1,7 +1,7 @@
-import type { SxProps } from '@mui/material';
-import Avatar from '@mui/material/Avatar';
-type Variant = 'circular' | 'square';
-type Size = 'sm' | 'md' | 'lg';
+import type { SxProps } from "@mui/material";
+import Avatar from "@mui/material/Avatar";
+type Variant = "circular" | "square";
+type Size = "sm" | "md" | "lg";
 interface IAvatarprops {
   source: string;
   alt?: string;
@@ -29,9 +29,9 @@ const sizeToSx: Record<Size, SxProps> = {
 export const Avatars = ({
   source,
   alt,
-  variant = 'circular',
+  variant = "circular",
   className,
-  size = 'md',
+  size = "md",
 }: IAvatarprops) => {
   const sx = sizeToSx[size];
   return (

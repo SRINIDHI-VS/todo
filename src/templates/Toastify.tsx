@@ -1,8 +1,8 @@
-import MuiAlert from '@mui/material/Alert';
-import Snackbar from '@mui/material/Snackbar';
-import React, { createContext, useContext, useState } from 'react';
+import MuiAlert from "@mui/material/Alert";
+import Snackbar from "@mui/material/Snackbar";
+import React, { createContext, useContext, useState } from "react";
 
-type Variant = 'error' | 'warning' | 'info' | 'success';
+type Variant = "error" | "warning" | "info" | "success";
 
 const ToastifyContext = createContext<
   (variant: Variant, mesage: string) => void | undefined
@@ -12,7 +12,7 @@ export const useToast = () => {
   const context = useContext(ToastifyContext);
 
   if (!context) {
-    throw new Error('useToast must be used within a ToastifyProviders');
+    throw new Error("useToast must be used within a ToastifyProviders");
   }
 
   return context;
@@ -24,10 +24,10 @@ interface IToastifyProps {
 
 export const ToastifyProvider = ({ children }: IToastifyProps) => {
   const [toastifyOpen, settoastifyOpen] = useState(false);
-  const [message, setMessage] = useState('');
-  const [variant, setVariant] = useState<Variant>('success');
+  const [message, setMessage] = useState("");
+  const [variant, setVariant] = useState<Variant>("success");
 
-  const showToastify = (variant: Variant = 'success', message: string) => {
+  const showToastify = (variant: Variant = "success", message: string) => {
     setMessage(message);
     setVariant(variant);
     settoastifyOpen(true);
@@ -44,7 +44,7 @@ export const ToastifyProvider = ({ children }: IToastifyProps) => {
         open={toastifyOpen}
         autoHideDuration={5000} // Adjust as needed
         onClose={closeToastify}
-        anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
+        anchorOrigin={{ vertical: "bottom", horizontal: "right" }}
       >
         <MuiAlert
           elevation={6}

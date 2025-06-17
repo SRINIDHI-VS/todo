@@ -1,10 +1,10 @@
-import clsx from 'clsx';
-import type { ChangeEvent } from 'react';
+import clsx from "clsx";
+import type { ChangeEvent } from "react";
 
-import { IconButton } from './Icon';
+import { IconButton } from "./Icon";
 
-type Size = 'sm' | 'lg';
-type InputType = 'text' | 'password';
+type Size = "sm" | "lg";
+type InputType = "text" | "password";
 
 type IInputProps = {
   label?: string;
@@ -25,21 +25,21 @@ type IInputProps = {
 );
 
 const InputSize: { [key in Size]: string } = {
-  sm: 'h-10',
-  lg: 'h-14',
+  sm: "h-10",
+  lg: "h-14",
 };
 
 export const Input: React.FC<IInputProps> = ({
-  placeholder = '',
-  className = '',
-  size = 'sm',
+  placeholder = "",
+  className = "",
+  size = "sm",
   type,
   onChange,
   disabled = false,
-  name = '',
-  id = '',
+  name = "",
+  id = "",
   value,
-  error = '',
+  error = "",
   label,
   iconButtonSrc,
   onIconButtonClick,
@@ -55,8 +55,8 @@ export const Input: React.FC<IInputProps> = ({
           className={clsx(
             InputSize[size],
             iconButtonSrc && {
-              'pr-24': size === 'lg',
-              'pr-20': size === 'sm',
+              "pr-24": size === "lg",
+              "pr-20": size === "sm",
             },
             className
           )}

@@ -1,7 +1,7 @@
-import clsx from 'clsx';
+import clsx from "clsx";
 
-type Variant = 'primary' | 'secondary' | 'tertiary';
-type Size = 'sm' | 'md' | 'lg';
+type Variant = "primary" | "secondary" | "tertiary";
+type Size = "sm" | "md" | "lg";
 interface IButtonProps {
   children: string | React.ReactNode;
   disabled?: boolean;
@@ -13,13 +13,13 @@ interface IButtonProps {
   leftIcon?: React.ReactNode;
   variant?: Variant;
   size?: Size;
-  type?: 'button' | 'reset' | 'submit';
+  type?: "button" | "reset" | "submit";
 }
 
 const BtnVariant: { [key in Variant]: string } = {
-  primary: 'btn-primary',
-  secondary: 'btn-secondary',
-  tertiary: 'btn-tertiary',
+  primary: "btn-primary",
+  secondary: "btn-secondary",
+  tertiary: "btn-tertiary",
 };
 
 export const Button: React.FC<IButtonProps> = ({
@@ -27,12 +27,12 @@ export const Button: React.FC<IButtonProps> = ({
   disabled = false,
   onClick,
   className,
-  id = '',
+  id = "",
   loading = false,
-  rightIcon = '',
-  leftIcon = '',
-  variant = 'primary',
-  size = 'md',
+  rightIcon = "",
+  leftIcon = "",
+  variant = "primary",
+  size = "md",
   type,
 }) => {
   return (
@@ -42,20 +42,20 @@ export const Button: React.FC<IButtonProps> = ({
       disabled={loading || disabled}
       onClick={onClick}
       className={clsx(
-        'btn',
+        "btn",
         BtnVariant[variant],
-        loading || disabled ? 'cursor-not-allowed' : 'cursor-pointer',
+        loading || disabled ? "cursor-not-allowed" : "cursor-pointer",
         className,
         {
-          'btn-40': size === 'md',
-          'btn-48': size === 'lg',
-          btn: size === 'sm',
+          "btn-40": size === "md",
+          "btn-48": size === "lg",
+          btn: size === "sm",
         }
       )}
     >
       {loading ? (
         <svg
-          className="h-5 w-5 animate-spin text-white"
+          className="size-5 animate-spin text-white"
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
           viewBox="0 0 24 24"
