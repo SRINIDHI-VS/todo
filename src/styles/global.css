@@ -1,0 +1,587 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Base Colours*/
+    --p100: 255 255 255;
+    --p99: 255 251 255;
+    --p95: 244 238 255;
+    --p90: 229 222 255;
+    --p80: 200 191 255;
+    --p70: 172 159 255;
+    --p50: 117 90 255;
+    --p30: 67 0 218;
+    --p40: 91 52 244;
+    --s80: 203 194 219;
+    --s30: 74 68 88;
+    --s20: 51 45 65;
+    --s15: 41 32 65;
+    --s13: 37 28 61;
+    --s11: 33 24 56;
+    --s9: 29 20 52;
+    --s7: 24 15 47;
+    --s5: 20 11 43;
+    /* Opacities */
+    --text-alpha-accent: 0.96;
+    --text-alpha-pure: 1;
+    --text-alpha-high: 0.89;
+    --text-alpha-medium: 0.72;
+    --text-alpha-low: 0.42;
+    --text-alpha-invert-accent: 0.96;
+    --text-alpha-invert-high: 0.9;
+    --text-alpha-invert-medium: 0.66;
+    --act-alpha-s-hover: 0.15;
+    --act-alpha-s-focus: 0.1;
+    --act-alpha-n-inactive: 0.66;
+    --act-alpha-n-disabled: 0.42;
+    --border-alpha: 0.25;
+    /* Light Mode*/
+    --colors-moimain: 75 23 229;
+    --colors-moidark: 50 15 153;
+    --surfaces-level-0: var(--p95);
+    --surfaces-level-1: var(--p95);
+    --surfaces-level-2: var(--p99);
+    --surfaces-level-3: var(--p99);
+    --surfaces-level-4: var(--p99);
+    --surfaces-level-5: var(--p100);
+    --surfaces-level-6: var(--p100);
+    --action-p-default: var(--p40);
+    --action-p-hover: var(--p30);
+    --action-p-focus: var(--p50);
+    --action-p-disabled: var(--s80);
+    --action-s-hover: var(--p50);
+    --action-s-focus: var(--p50);
+    --action-n-inactive: 0 0 0;
+    --action-n-disabled: 0 0 0;
+    --text-accent: var(--p30);
+    --text-pure: var(--s5);
+    --text-high: var(--s5);
+    --text-medium: var(--s5);
+    --text-low: var(--s5);
+    --border-default: var(--s5);
+    /* Invert Mode*/
+    --colors-invert-moimain: 255 255 255;
+    --colors-invert-moidark: 221 221 221;
+    --surfaces-invert-level-0: var(--s5);
+    --surfaces-invert-level-1: var(--s7);
+    --surfaces-invert-level-2: var(--s9);
+    --surfaces-invert-level-3: var(--s11);
+    --surfaces-invert-level-4: var(--s11);
+    --surfaces-invert-level-5: var(--s13);
+    --surfaces-invert-level-6: var(--s15);
+    --action-invert-p-default: var(--p80);
+    --action-invert-p-hover: var(--p90);
+    --action-invert-p-focus: var(--p70);
+    --action-invert-p-disabled: var(--s20);
+    --action-invert-s-hover: var(--p100);
+    --action-invert-s-focus: var(--p100);
+    --action-invert-n-inactive: 255 255 255;
+    --action-invert-n-disabled: 255 255 255;
+    --text-invert-accent: var(--p80);
+    --text-invert-pure: var(--p100);
+    --text-invert-high: var(--p100);
+    --text-invert-medium: var(--p100);
+    --text-invert-low: var(--p100);
+    --border-invert-default: var(--p100);
+    /* .image-light {
+      display: block;
+    }
+    .image-dark {
+      display: none;
+    } */
+  }
+  @media (prefers-color-scheme: dark) {
+    
+    :root {
+      /* Base Colours*/
+      --p100: 255 255 255;
+      --p99: 255 251 255;
+      --p95: 244 238 255;
+      --p90: 229 222 255;
+      --p80: 200 191 255;
+      --p70: 172 159 255;
+      --p50: 117 90 255;
+      --p30: 67 0 218;
+      --p40: 91 52 244;
+      --s80: 203 194 219;
+      --s30: 74 68 88;
+      --s20: 51 45 65;
+      --s15: 41 32 65;
+      --s13: 37 28 61;
+      --s11: 33 24 56;
+      --s9: 29 20 52;
+      --s7: 24 15 47;
+      --s5: 20 11 43;
+      /* Text Opacities */
+      --text-alpha-accent: 0.96;
+      --text-alpha-pure: 1;
+      --text-alpha-high: 0.9;
+      --text-alpha-medium: 0.66;
+      --text-alpha-low: 0.33;
+      --text-alpha-invert-accent: 0.96;
+      --text-alpha-invert-high: 0.89;
+      --text-alpha-invert-medium: 0.72;
+      --act-alpha-s-hover: 0.15;
+      --act-alpha-s-focus: 0.1;
+      --act-alpha-n-inactive: 0.66;
+      --act-alpha-n-disabled: 0.42;
+      --border-alpha: 0.25;
+      /* Dark Mode*/
+      --colors-moimain: 255 255 255;
+      --colors-moidark: 221 221 221;
+      --surfaces-level-0: var(--s5);
+      --surfaces-level-1: var(--s7);
+      --surfaces-level-2: var(--s9);
+      --surfaces-level-3: var(--s11);
+      --surfaces-level-4: var(--s11);
+      --surfaces-level-5: var(--s13);
+      --surfaces-level-6: var(--s15);
+      --action-p-default: var(--p80);
+      --action-p-hover: var(--p90);
+      --action-p-focus: var(--p70);
+      --action-p-disabled: var(--s20);
+      --action-s-hover: var(--p100);
+      --action-s-focus: var(--p100);
+      --action-n-inactive: 255 255 255;
+      --action-n-disabled: 255 255 255;
+      --text-accent: var(--p80);
+      --text-pure: var(--p100);
+      --text-high: var(--p100);
+      --text-medium: var(--p100);
+      --text-low: var(--p100);
+      --border-default: var(--p100);
+      /* Invert Mode*/
+      --colors-invert-moimain: 75 23 229;
+      --colors-invert-moidark: 50 15 153;
+      --surfaces-invert-level-0: var(--p95);
+      --surfaces-invert-level-1: var(--p99);
+      --surfaces-invert-level-2: var(--p99);
+      --surfaces-invert-level-3: var(--p99);
+      --surfaces-invert-level-4: var(--p99);
+      --surfaces-invert-level-5: var(--p100);
+      --surfaces-invert-level-6: var(--p100);
+      --action-invert-p-default: var(--p40);
+      --action-invert-p-hover: var(--p30);
+      --action-invert-p-focus: var(--p50);
+      --action-invert-p-disabled: var(--p80);
+      --action-invert-s-hover: var(--p50);
+      --action-invert-s-focus: var(--p50);
+      --action-invert-n-inactive: 0 0 0;
+      --action-invert-n-disabled: 0 0 0;
+      --text-invert-accent: var(--p30);
+      --text-invert-pure: var(--s5);
+      --text-invert-high: var(--s5);
+      --text-invert-medium: var(--s5);
+      --text-invert-low: var(--s5);
+      --border-default: var(--p100);
+      /* .image-dark {
+        display: block;
+      }
+      .image-light {
+        display: none;
+      } */
+    }
+  }
+}
+
+/* To rerun Tailwind compiler, run the following command:
+npx tailwindcss -i ./src/css/input.css -o ./src/css/output.css --watch
+*/
+
+html {
+  @apply font-poppins bg-lvl0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  @apply text-high;
+}
+
+p {
+  @apply text-medium;
+}
+
+footer p {
+  @apply text-medium;
+}
+
+/* NAVBARS */
+/* Style the default nav */
+
+.nav {
+  @apply w-screen fixed flex flex-row justify-between items-center h-56 px-16 pr-0 z-20 tab-s:h-80 tab-s:px-24 tab-l:px-32;
+  backdrop-filter: blur(24px);
+  transition: background-color 0.3s ease-in;
+  transition: box-shadow 0.3s ease-in;
+}
+
+/* Set light and dark nav colours*/
+
+.nav-light {
+  @apply bg-lvl0 shadow-level4;
+  }
+
+.nav-dark {
+	@apply bg-lvl0;
+}
+
+/* This class is removed from the nav with JS when it scrolls past the top */
+
+.nav-transparent {
+  @apply h-64 tab-s:h-80 tab-l:h-128;
+  background: none;
+  backdrop-filter: blur(0px);
+  box-shadow: none;
+}
+
+.nav-right {
+  @apply flex flex-row items-center gap-8;
+}
+
+.nav-menu {
+  @apply absolute right-0 top-56 flex flex-col gap-16 p-32 text-right bg-lvl0 rounded-16 tab-l:relative tab-l:right-0 tab-l:top-0 tab-l:flex-row tab-l:gap-32 tab-l:bg-transparent;
+}
+
+.nav-links {
+  @apply text-medium hover:text-high label-default;
+}
+
+/* Mobile navbar with menu hidden */
+
+.nav-menu.hidden {
+  display: none;
+}
+
+/* Transparent navbar and descendants */
+
+.nav-transparent .btn {
+  @apply btn-40 tab-l:btn-48;
+}
+
+.nav-transparent .nav-links {
+  @apply label-big;
+}
+
+.nav-transparent .nav-logo {
+  @apply h-40 tab-s:h-[60px] tab-l:h-80;
+}
+
+/* RECURRING LAYOUTS */
+
+main {
+  @apply w-full flex flex-col gap-80 tab-s:gap-120 tab-l:gap-200 overflow-hidden;
+}
+
+.main-tight {
+  @apply gap-40 tab-s:gap-64 tab-l:gap-80 overflow-hidden;
+}
+
+/* Top padding on pages to account for fixed navbars */
+.main-top {
+  @apply pt-56 tab-s:pt-120 tab-l:pt-128;
+}
+
+/* Bottom padding on pages to maintain gap between last section and footers */
+.main-bottom {
+  @apply pb-80 tab-s:pb-120 tab-l:pb-200;
+}
+
+section {
+  @apply items-center;
+}
+
+.gap-responsive {
+  @apply gap-16 tab-l:gap-24 scr-m:gap-32;
+}
+
+.gap-section {
+  @apply gap-32 tab-l:gap-40 scr-m:gap-48 scr-l:gap-56;
+}
+
+.gap-section-small {
+  @apply gap-24 tab-l:gap-32 scr-m:gap-40 scr-l:gap-48;
+}
+
+.row-btn {
+  @apply inline-flex flex-wrap gap-16;
+}
+
+.row-icon {
+  @apply inline-flex flex-row gap-8;
+}
+
+/* Footers */
+
+.footer-col {
+  @apply hidden text-right text-invert-medium scr-s:flex scr-s:flex-col scr-s:gap-32;
+}
+
+.footer-list {
+  @apply flex flex-col gap-4;
+}
+
+.footer-list a {
+  @apply psmall;
+}
+
+.footer-hidden {
+  @apply hidden tab-s:grid tab-s:grid-cols-2 tab-s:gap-32 tab-s:items-start;
+}
+
+/*Iconography*/
+
+.icon {
+  transition: color 0.3s ease-in;
+}
+
+.icon-20 {
+  @apply h-20 w-20;
+}
+
+.icon-24 {
+  @apply h-24 w-24;
+}
+
+.icon-48 {
+  @apply h-48 w-48;
+}
+
+.icon-duo {
+  @apply text-accent;
+}
+
+/* CARDS */
+.card {
+  @apply bg-lvl3 shadow-level3 rounded-24;
+  backdrop-filter: blur(24px);
+}
+
+.card:hover {
+  @apply bg-lvl4 shadow-level4;
+}
+
+/* TABLES */
+/* Tables */
+
+.table-default td {
+  @apply border-solid border-black border-2;
+}
+
+/* PROJECT SPECIFIC CLASSES */
+
+/* Layouts */
+
+/* Hide scrollbar on timeline section for Chrome, Safari and Opera */
+
+.timeline-container {
+  @apply w-full flex flex-col justify-start items-center overflow-x-auto;
+}
+
+.timeline-wrapper {
+  @apply inline-flex gap-responsive self-start scr-s:self-center;
+}
+
+.timeline-item {
+  @apply w-[240px] flex flex-col gap-16 items-center border-action-p-default;
+}
+
+.timeline-pointer {
+  @apply basis-32 grow border-l-4 w-[10px] rounded-[2px] border-action-p-default;
+}
+
+.timeline-top > .timeline-item {
+  @apply border-b-4;
+}
+
+.timeline-bottom {
+  margin-top: -4px;
+}
+
+.timeline-bottom > .timeline-item {
+  @apply border-t-4;
+}
+
+.timeline-disabled {
+  @apply !border-invert-action-p-default;
+}
+
+/* Cards */
+
+.icon-card-external {
+  @apply icon absolute text-low right-16 bottom-16;
+}
+
+.card-cta {
+  @apply card relative h-full flex flex-col gap-8 px-24 py-32;
+}
+
+.card-ecosystem {
+  @apply card relative h-full flex flex-col place-items-start gap-16 p-24 pb-32;
+}
+
+.card-news {
+  @apply card h-full flex flex-col gap-16 p-16 pb-24;
+}
+
+.numbers-grid {
+  @apply p-6 rounded-24 bg-lvl0 shadow-level1 text-center;
+}
+
+/* Images */
+
+/* Logos */
+
+.logo-apps {
+  @apply filter grayscale w-auto h-24 tab-s:h-32;
+  transition: filter 0.3s ease-in-out;
+}
+
+.logo-apps:hover {
+  @apply filter-none;
+  transition: filter 0.15s ease-in-out;
+}
+
+.logo-partners {
+  @apply p-8 rounded-24 bg-lvl2 shadow-level1;
+}
+
+.logo-footer {
+  @apply relative object-contain object-left h-[60px] scr-s:h-80;
+}
+
+/* Images */
+
+.img-hero {
+  @apply min-h-[320px] object-contain tab-l:min-h-[480px];
+}
+
+.img-timeline {
+  @apply h-80 object-contain object-left scr-s:h-160;
+}
+
+.img-news {
+  @apply h-160 object-cover object-center rounded-8;
+}
+
+.moi-contribute-card {
+  @apply p-8 rounded-24 bg-lvl2;
+}
+
+/* a {
+    @apply pb-1;
+}
+a:hover {
+    @apply text-accent;
+} */
+
+/* BACKGROUND ANIMATION */
+
+/*Turn off canvas animations on low-contrast devices */
+@media (prefers-contrast: high) {
+  .canvas-background {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 628px) and (max-width: 4000px) {
+  canvas {
+    height: 100% !important;
+    align-self: center;
+  }
+}
+
+.canvas-background {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+  z-index: -1;
+}
+
+/* Hero animations */
+
+/* Three JS animation for hero section on Homepage*/
+
+#three-container {
+  justify-content: center;
+  display: flex;
+  width: 40vw;
+  height: 40vw;
+}
+
+@media (max-width: 768px) {
+  #three-container {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    width: 80vw;
+    height: 80vw;
+    overflow: hidden;
+  }
+}
+
+/* Typing Animations on hero section on Homepage */
+
+.typing-animated {
+  @apply absolute right-64 bottom-64 text-center;
+}
+
+.accordionItem {
+  @apply bg-lvl0 grid gap-24 p-6 shadow-level2 rounded-16;
+}
+
+.faq-container {
+  width: 800px;
+}
+
+@media (max-width: 960px) {
+  .faq-container {
+    width: auto;
+  }
+}
+.social-media-icons {
+  @apply grid grid-flow-col justify-center auto-cols-max gap-8;
+}
+
+.profile-card {
+  @apply grid items-center justify-self-center gap-16 text-center;
+}
+
+.card:hover .icon-card-external {
+  @apply text-accent;
+  transition: color 0.15s ease-in;
+}
+
+
+
+.social-icon {
+  @apply h-32 w-32 text-medium;
+}
+
+.social-icon:hover {
+  @apply text-high bg-action-s-hover rounded-3xl;
+}
+
+.social-icon-dark {
+  @apply h-32 w-32 text-invert-medium;
+}
+
+.social-icon-dark:hover {
+  @apply text-invert-high bg-invert-action-s-hover rounded-3xl;
+}
+
+.color-card {
+  @apply border-2 border-action-p-default h-auto w-full p-24;
+}
+input:focus{
+  /* @apply outline-action-p-default bg-none border border-2 border-action-p-default box-border; */
+  /* @apply outline-action-p-default box-content rounded-none rounded-none; */
+  @apply outline-none ring-action-p-default ring-4
+}
